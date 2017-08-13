@@ -3,13 +3,13 @@ MAINTAINER Doug Goldstein <doug@starlab.io>
 
 # bring in dependencies
 RUN apt-get update && \
-    apt-get --yes --quiet install build-essential git automake autoconf wget \
+    apt-get --yes --quiet install build-essential git automake autoconf curl \
         libssl-dev pkg-config autoconf-archive libtool libcurl4-openssl-dev && \
     apt-get clean &&  \
     rm -rf /var/lib/apt/lists* /tmp/* /var/tmp/*
 
 # tpm2-emulator
-RUN wget -O ibmtpm974.tar.gz https://sourceforge.net/projects/ibmswtpm2/files/ibmtpm974.tar.gz/download && \
+RUN curl -sSfL https://sourceforge.net/projects/ibmswtpm2/files/ibmtpm974.tar.gz/download > ibmtpm974.tar.gz && \
     mkdir ibmtpm && \
     cd ibmtpm && \
     tar -zxf ../ibmtpm974.tar.gz && \
