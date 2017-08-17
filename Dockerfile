@@ -41,3 +41,10 @@ RUN git clone https://github.com/01org/tpm2-tools.git && \
 
 # have the tpm2 tools always connect to the socket
 ENV TPM2TOOLS_TCTI_NAME=socket
+
+# the TPM emulator listens on ports 2321 and 2322.
+EXPOSE 2321
+EXPOSE 2322
+
+# default action is to start the TPM emulator with its state cleared
+CMD ["tpm_server", "-rm"]
