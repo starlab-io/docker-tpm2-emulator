@@ -39,6 +39,8 @@ RUN git clone https://github.com/01org/tpm2-tools.git && \
     cd && \
     rm -rf tpm2-tools
 
+RUN ldconfig
+
 # have the tpm2 tools always connect to the socket
 ENV TPM2TOOLS_TCTI_NAME=socket
 
