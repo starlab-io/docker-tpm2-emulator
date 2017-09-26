@@ -1,3 +1,11 @@
+# DEPRECATED
+
+Please use starlabio/tpm-emulator:2.0 which contains both TPM 1.2 and TPM 2.0.
+
+[https://github.com/starlab-io/docker-tpm-emulator](GitHub)
+
+[https://hub.docker.com/r/starlabio/tpm-emulator](Docker Hub)
+
 # tpm2-emulator
 
 Provides the TPM 2.0 tool software stack with the command line tools and
