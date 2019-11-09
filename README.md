@@ -2,9 +2,9 @@
 
 Please use starlabio/tpm-emulator:2.0 which contains both TPM 1.2 and TPM 2.0.
 
-[https://github.com/starlab-io/docker-tpm-emulator](GitHub)
+[GitHub](https://github.com/starlab-io/docker-tpm-emulator)
 
-[https://hub.docker.com/r/starlabio/tpm-emulator](Docker Hub)
+[Docker Hub](https://hub.docker.com/r/starlabio/tpm-emulator)
 
 # tpm2-emulator
 
