@@ -8,7 +8,7 @@ RUN pip install behave pyhamcrest requests pexpect
 RUN apt-get update && \
     apt-get --yes --quiet install build-essential git automake autoconf curl \
         pkg-config autoconf-archive libtool libcurl4-openssl-dev libgmp-dev \
-        libssl-dev cmake trousers tpm-tools && \
+        libssl-dev cmake trousers tpm-tools alien && \
     apt-get clean &&  \
     rm -rf /var/lib/apt/lists* /tmp/* /var/tmp/*
 
