@@ -12,6 +12,11 @@ RUN apt-get update && \
     apt-get clean &&  \
     rm -rf /var/lib/apt/lists* /tmp/* /var/tmp/*
 
+# add lib64 to LD_LIBRARY_PATH
+RUN echo "# RHEL lib location compatibility" >> /etc/ld.so.conf.d/lib64.conf && \
+    echo "/usr/lib64" >> /etc/ld.so.conf.d/lib64.conf && \
+    ldconfig
+
 # have trousers always connect to the tpm-emulator
 ENV TCSD_USE_TCP_DEVICE=1
 
